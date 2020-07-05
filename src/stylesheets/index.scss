@@ -1,0 +1,15 @@
+html{
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.pagination{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item{
+    cursor: pointer;
+}
