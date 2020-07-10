@@ -32,17 +32,17 @@ class MovieItem extends React.Component{
                     alt={movie.title}
                 />
                 <div className="card-body">
-                    <h6 className="card-title">{movie.title}</h6>
-                    <div className="d-flex justify-content-between align-items-center">
+                    <h6 className="card-title mb-0">{movie.title}</h6>
+                    <div className="d-flex justify-content-between align-items-center mb-2 mt-2">
                     <p className="mb-0">Rating: {movie.vote_average}</p>
                     <button type="button" className={this.state.willWatch ? "btn btn-success" : "btn btn-secondary"} onClick={()=>{
                             this.toggleWillWatch();
                             this.state.willWatch ? removeMovieFromWillWatch(movie) : addMovieToWillWatch(movie);
                         }}>
-                        {this.state.willWatch ? "Remove Movie" : "Will Watch"}
+                        {this.state.willWatch ? "Remove" : "Will Watch"}
                     </button>
                     </div>
-                    <button onClick={removeMovie.bind(this, movie)}>Delete Movie</button>
+                    <button className="btn btn-outline-dark" onClick={removeMovie.bind(this, movie)}>Delete Movie</button>
                 </div>
             </div>
         )

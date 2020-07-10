@@ -6,9 +6,9 @@ class Pagination extends React.Component{
         let newPage = page;
         return(
             <div className="pagination">
-                <button disabled={page === 1 ? true : false} onClick={updatePageNum.bind(this, newPage-1)}>Previous</button>
+                <button className="btn btn-outline-dark" disabled={page === 1 ? true : false} onClick={updatePageNum.bind(this, newPage-1)}>Previous</button>
                 <p> Current Page: {page} from {total_pages}</p> 
-                <button disabled={page === 500 ? true : false} onClick={updatePageNum.bind(this, newPage+1)}>Next</button>
+                <button className="btn btn-outline-dark" disabled={page === 500 ? true : false} onClick={updatePageNum.bind(this, newPage+1)}>Next</button>
             </div>
         );
     }
